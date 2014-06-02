@@ -1,0 +1,6 @@
+I modified my code based on the reference here:
+    http://saicheems.wordpress.com/2014/01/05/uva-10010-wheres-waldorf/
+
+Reference does a better job in turns of searching for eight direcitons. 
+It uses two arrays to track the next direction to search. one for the x axis and the other for y axis to do the dfs.
+
