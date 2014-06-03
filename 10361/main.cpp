@@ -1,7 +1,6 @@
 //Qiyuan Qiu
 //UVa 10361:  Automatic Poetry 
 #include<iostream>
-#include<vector>
 using namespace std;
 
 int main()
@@ -23,10 +22,16 @@ int main()
         string tline = line1;
         string s[5];
         for( int i=0; i<5; i++){
+            s[i] = "";
+        }
+
+        //here when constructing new strings
+        for( int i=0; i<4; i++){
             size_t pos = tline.find(tokens[i]);
-            if( i != 5)
-                s[i] = tline.substr(0, pos + 1 - 1);
+            s[i] = tline.substr(0, pos + 1 - 1);
             tline = tline.substr(pos+1, tline.size() - s[i].size() - 1);
+            if(i == 3)
+                s[4] = tline;
             //cout<< "s[" << i<< "] is: " << s[i] << endl;
             //cout<< "tline is: " << tline << endl;
         }
