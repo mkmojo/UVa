@@ -14,12 +14,17 @@ bool has_line(int x,int y, string line)
 {
     for( int i = 0; i < 8; i++ ){
         int tr = x, tc = y, k = 0;
-        for( int k = 0; k < line.size(); k++) {
+        for( k = 0; k < line.size(); k++) {
             if( tr >= m || tr < 0 || tc >= n || tc <0 ) break;
             if( a[tr][tc] != line[k] ) break;
             tr += dr[i], tc += dc[i];
         } 
-        if( k == line.size() ){
+        
+        
+        //if(line == "bambi" && x == 1 && y == 2)
+         //   cout << "checking direction: " << i <<"for word " << line << " getting k: " << k << endl;
+        
+        if( k == line.size()  ){
             return true;
         }
     }
