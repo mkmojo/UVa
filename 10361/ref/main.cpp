@@ -30,7 +30,7 @@ int main()
             size_t pos = tline.find(tokens[i]);
             s[i] = tline.substr(0, pos + 1 - 1);
             tline = tline.substr(pos+1, tline.size() - s[i].size() - 1);
-            if(i == 3) // handle last part
+            if(i == 3)
                 s[4] = tline;
             //cout<< "s[" << i<< "] is: " << s[i] << endl;
             //cout<< "tline is: " << tline << endl;
